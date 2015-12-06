@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>497</width>
+    <height>484</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>扯淡君</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPalette{background:#F0F0F0;}
+
+QWidget#frmMain,QWidget[Form=&quot;true&quot;]{
+border:1px solid #575757;
+border-radius:0px;
+}
+
+.QFrame{
+border:1px solid #C2CCD8;
+border-radius:5px;
+}
+
+QWidget#widget_title,QToolBar{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+QLabel{
+color:#000000;
+}
+
+QLabel#lab_Ico,QLabel#lab_Title{
+border-radius:0px;
+color:#F0F0F0;
+background-color:rgba(0,0,0,0);
+border-style:none;
+}
+
+QLabel#labfrmData,QLabel#labfrmHost,QLabel#labfrmDefence,QLabel#labfrmIPCGroup,QLabel#labfrmIPC,QLabel#labfrmIPCLink,QLabel#labfrmVideoPlayBack,QLabel#labfrmConfig,QLabel#labCheckAllStatus,QLabel#labfrmExit{
+padding:5px;
+color:#F0F0F0;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+QLabel#labfrmData:hover,QLabel#labfrmHost:hover,QLabel#labfrmDefence:hover,QLabel#labfrmIPCGroup:hover,QLabel#labfrmIPC:hover,QLabel#labfrmIPCLink:hover,QLabel#labfrmVideoPlayBack:hover,QLabel#labfrmConfig:hover,QLabel#labCheckAllStatus:hover,QLabel#labfrmExit:hover{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #636363,stop:1 #575757);
+}
+
+QLabel[labVideo=&quot;true&quot;]{
+color:#F0F0F0;
+border:1px solid #575757;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+QLabel[labVideo=&quot;true&quot;]:focus{
+border:1px solid #FF0000;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #636363,stop:1 #575757);
+}
+
+QLineEdit,QTextEdit,QSpinBox{
+border:1px solid #C2CCD8;
+border-radius:5px;
+padding:2px;
+background:none;
+selection-background-color:#4D4D4D;
+selection-color:#F0F0F0;
+}
+
+QLineEdit[echoMode=&quot;2&quot;]{
+lineedit-password-character:9679;
+}
+
+.QGroupBox{
+border:1px solid #C2CCD8;
+border-radius:5px;
+}
+
+.QToolButton{
+border-style:none;
+color:#F0F0F0;
+padding:5px;
+min-height:15px;
+min-width:30px;
+border-radius:5px;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+.QToolButton:hover{
+border:1px solid #C2CCD8;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #636363,stop:1 #575757);
+}
+
+.QPushButton{
+border-style:none;
+border:1px solid #C2CCD8;
+color:#F0F0F0;
+padding:5px;
+min-height:20px;
+border-radius:5px;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+.QPushButton[focusPolicy=&quot;0&quot;]{
+border-style:none;
+border:1px solid #C2CCD8;
+color:#F0F0F0;
+padding:0px;
+min-height:10px;
+border-radius:3px;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+.QPushButton:hover{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #636363,stop:1 #575757);
+}
+
+.QPushButton:pressed{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+.QPushButton:disabled{
+color:#838383;
+background:#F4F4F4;
+}
+
+QPushButton#btnMenu,QPushButton#btnMenu_Min,QPushButton#btnMenu_Max,QPushButton#btnMenu_Close{
+border-radius:0px;
+color:#F0F0F0;
+background-color:rgba(0,0,0,0);
+border-style:none;
+}
+
+QPushButton#btnMenu:hover,QPushButton#btnMenu_Min:hover,QPushButton#btnMenu_Max:hover{
+background-color:qlineargradient(spread:pad,x1:0,y1:1,x2:0,y2:0,stop:0 rgba(25,134,199,0),stop:1 #636363);
+}
+
+QPushButton#btnMenu_Close:hover{
+background-color:qlineargradient(spread:pad,x1:0,y1:1,x2:0,y2:0,stop:0 rgba(238,0,0,128),stop:1 rgba(238,44,44,255));
+}
+
+QCheckBox{
+color:#000000;
+spacing:2px;
+}
+
+QCheckBox::indicator{
+width:20px;
+height:20px;
+}
+
+QCheckBox::indicator:unchecked{
+image:url(:/image/checkbox_unchecked.png);
+}
+
+QCheckBox::indicator:checked{
+image:url(:/image/checkbox_checked.png);
+}
+
+QRadioButton{
+color:#000000;
+spacing:2px;
+}
+
+QRadioButton::indicator{
+width:15px;
+height:15px;
+}
+
+QRadioButton::indicator::unchecked{
+image:url(:/image/radio_normal.png);
+}
+
+QRadioButton::indicator::checked{
+image:url(:/image/radio_selected.png);
+}
+
+QSpinBox::up-button{
+image:url(:/image/array_up.png);
+}
+
+QSpinBox::down-button{
+image:url(:/image/array_down.png);
+}
+
+QComboBox,QDateEdit,QSpinBox{
+border-radius:3px;
+padding:3px 5px 3px 5px;
+border:1px solid #C2CCD8;
+}
+
+QComboBox::drop-down,QDateEdit::drop-down{
+subcontrol-origin:padding;
+subcontrol-position:top right;
+width:15px;
+border-left-width:1px;
+border-left-style:solid;
+border-top-right-radius:3px;
+border-bottom-right-radius:3px;
+border-left-color:#C2CCD8;
+}
+
+QComboBox::down-arrow,QDateEdit::down-arrow{
+image:url(:/image/array_down.png);
+}
+
+QMenu{
+color:#F0F0F0;
+background-color:#4D4D4D;
+margin:2px;
+}
+
+QMenu::item{
+padding:3px 10px 3px 10px;
+}
+
+QMenu::indicator{
+width:13px;
+height:13px;
+}
+
+QMenu::item:selected{
+color:#F0F0F0;
+border:1px solid #575757;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+QMenu::separator{
+height:1px;
+background:#575757;
+}
+
+QProgressBar{
+background:#C2CCD8;
+border-radius:5px;
+text-align:center;
+border:1px solid #C2CCD8;
+}
+
+QProgressBar::chunk{
+width:5px;
+margin:0.5px;
+background-color:#4D4D4D;
+}
+
+QSlider::groove:horizontal,QSlider::add-page:horizontal{
+height:8px;
+border-radius:3px;
+background:#C2CCD8;
+}
+
+QSlider::sub-page:horizontal{
+height:8px;
+border-radius:3px;
+background:#575757;
+}
+
+QSlider::handle:horizontal{
+width:13px;
+margin-top:-3px;
+margin-bottom:-3px;
+border-radius:6px;
+background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,stop:0.6 #FFFFFF,stop:0.8 #575757);
+}
+
+QSlider::groove:vertical,QSlider::sub-page:vertical{
+width:8px;
+border-radius:3px;
+background:#C2CCD8;
+}
+
+QSlider::add-page:vertical{
+width:8px;
+border-radius:3px;
+background:#575757;
+}
+
+QSlider::handle:vertical{
+height:13px;
+margin-left:-2px;
+margin-right:-3px;
+border-radius:6px;
+background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,stop:0.6 #FFFFFF,stop:0.8 #575757);
+}
+
+QScrollBar:vertical{
+width:10px;
+background-color:rgba(0,0,0,0%);
+padding-top:10px;
+padding-bottom:10px;
+}
+
+QScrollBar:horizontal{
+height:10px;
+background-color:rgba(0,0,0,0%);
+padding-left:10px;
+padding-right:10px;
+}
+
+QScrollBar::handle:vertical,QScrollBar::handle:horizontal{
+width:10px;
+background:#575757;
+}
+
+QScrollBar::handle:vertical:hover,QScrollBar::handle:horizontal:hover{
+width:10px;
+background:#292929;
+}
+
+QScrollBar::add-line:vertical{
+height:10px;
+width:10px;
+subcontrol-position:bottom;
+subcontrol-origin:margin;
+border-image:url(:/image/add-line_vertical.png);
+}
+
+QScrollBar::add-line:horizontal{
+height:10px;
+width:10px;
+subcontrol-position:right;
+subcontrol-origin:margin;
+border-image:url(:/image/add-line_horizontal.png);
+}
+
+QScrollBar::sub-line:vertical{
+height:10px;
+width:10px;
+subcontrol-position:top;
+subcontrol-origin:margin;
+border-image:url(:/image/sub-line_vertical.png);
+}
+
+QScrollBar::sub-line:horizontal{
+height:10px;
+width:10px;
+subcontrol-position:left;
+subcontrol-origin:margin;
+border-image:url(:/image/sub-line_horizontal.png);
+}
+
+QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical,QScrollBar::add-page:horizontal,QScrollBar::sub-page:horizontal{
+width:10px;
+background:#C2CCD8;
+}
+
+QScrollArea{
+border:0px;
+}
+
+QTreeView,QListView,QTableView,QTabWidget::pane{
+border:1px solid #C2CCD8;
+selection-background-color:#636363;
+selection-color:#F0F0F0;
+}
+
+QTableView::item:selected,QListView::item:selected,QTreeView::item:selected{
+color:#F0F0F0;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+QTableView::item:hover,QListView::item:hover,QTreeView::item:hover{
+color:#F0F0F0;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #636363,stop:1 #575757);
+}
+
+QTableView::item,QListView::item,QTreeView::item{
+padding:5px;
+margin:0px;
+}
+
+QHeaderView::section,QTableCornerButton:section{
+padding:3px;
+margin:0px;
+color:#F0F0F0;
+border:1px solid #575757;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #636363,stop:1 #575757);
+}
+
+QTabBar::tab{
+border-radius:5px;
+border:1px solid #C2CCD8;
+color:#F0F0F0;
+min-width:60px;
+min-height:20px;
+padding:3px 8px 3px 8px;
+margin:1px;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #636363,stop:1 #575757);
+}
+
+QTabBar::tab:selected,QTabBar::tab:hover{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+QStatusBar::item{
+border:0px solid #4D4D4D;
+border-radius:3px;
+}
+
+QToolBox::tab{
+padding:5px;
+border-radius: 5px;
+color:#F0F0F0;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+QToolBox::tab:selected{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #636363,stop:1 #575757);
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0" columnstretch="2,0">
+   <item row="2" column="1">
+    <widget class="QPushButton" name="pushButton">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>发送</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="txtName">
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>路人甲</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" rowspan="2">
+    <widget class="QTextEdit" name="txtContext">
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QTextEdit" name="txtShow">
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>sendMesage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>520</x>
+     <y>437</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>296</x>
+     <y>235</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>sendMesage()</slot>
+ </slots>
+</ui>
